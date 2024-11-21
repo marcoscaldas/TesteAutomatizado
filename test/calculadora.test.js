@@ -28,4 +28,7 @@ describe("Calculadora", function () {
     assert.strictEqual(resultado, 5);
   });
 
+  it("deve lançar um erro ao tentar dividir por zero", function () {
+    assert.throws(() => calc.dividir(10, 0), /Divisão por zero não é permitida/);
+  });
 });
